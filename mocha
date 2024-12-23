@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mocha - The best coffee for passionate coffee lovers.">
+  <title>Mocha Coffee</title>
+  <style>
+    /* Global Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('https://via.placeholder.com/1600x900.png?text=Mocha+Coffee+Hero') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      background-position: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    .btn-primary {
+      padding: 15px 30px;
+      background-color: #6F4F37; /* Coffee color */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #3E2B1F;
+    }
+
+    /* Product Section */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product .info {
+      padding: 20px;
+      text-align: center;
+    }
+    .product h3 {
+      font-size: 1.8rem;
+      color: #6F4F37;
+    }
+    .product p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background-color: #f8f8f8;
+      padding: 60px 20px;
+    }
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .testimonial img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .testimonial p {
+      font-style: italic;
+      max-width: 600px;
+      text-align: center;
+    }
+    .testimonial .name {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* Contact Form Section */
+    .contact {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact input, .contact textarea {
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact button {
+      padding: 15px;
+      background-color: #6F4F37;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact button:hover {
+      background-color: #3E2B1F;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to Mocha</h1>
+    <p>The Best Coffee, Crafted Just for You</p>
+    <button class="btn-primary">Order Now</button>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200.png?text=Espresso" alt="Espresso">
+      <div class="info">
+        <h3>Espresso</h3>
+        <p>Rich and bold espresso to kickstart your day.</p>
+        <button class="btn-primary">Buy Now</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200.png?text=Latte" alt="Latte">
+      <div class="info">
+        <h3>Latte</h3>
+        <p>Smooth and creamy, perfect for a relaxing afternoon.</p>
+        <button class="btn-primary">Buy Now</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200.png?text=Mocha" alt="Mocha">
+      <div class="info">
+        <h3>Mocha</h3>
+        <p>A sweet blend of chocolate and coffee for your indulgence.</p>
+        <button class="btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials">
+    <h2>What Our Customers Are Saying</h2>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/100.png" alt="Customer">
+      <p>"Mocha's espresso is the best I've ever had! It keeps me energized all day."</p>
+      <div class="name">Sarah L.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/100.png" alt="Customer">
+      <p>"The Mocha coffee blend is perfect for my afternoon break. Love it!"</p>
+      <div class="name">John D.</div>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:youremail@example.com" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Mocha Coffee. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
